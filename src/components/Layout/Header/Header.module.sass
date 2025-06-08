@@ -1,0 +1,168 @@
+// Глобальні змінні (можна підключити окремо у variables.sass)
+// Тут вважаємо, що змінні вже доступні через :root
+body.dark-theme
+  .header
+    background-color: #2b2b2b
+
+.header
+  position: fixed
+  top: 0
+  width: 100%
+  padding: 10px 0
+  z-index: 1000
+  background: transparent
+  transition: background 0.3s ease, box-shadow 0.3s ease
+
+  &.scrolled
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+    background: white
+
+    body.dark-theme &
+      background: #222
+
+.headerContainer
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 2rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.logo
+  line-height: 1.1
+  font-family: "Arial", sans-serif
+  font-size: 1.8rem
+  font-weight: 700
+  letter-spacing: 1.5px
+
+  &Primary
+    color: var(--color-primary)
+
+  &Accent
+    color: var(--color-secondary)
+
+.navMenu
+  display: flex
+  align-items: center
+
+.navLinks
+  font-size: 19px
+  display: flex
+  gap: 2rem
+  align-items: center
+
+  a
+    position: relative
+    padding: 0.5rem 1rem
+    color: var(--color-primary)
+    text-decoration: none
+    transition: var(--transition)
+
+    &:hover
+      color: var(--color-secondary)
+
+    &::after
+      content: ""
+      position: absolute
+      bottom: -5px
+      left: 0
+      width: 0
+      height: 2px
+      background-color: var(--color-secondary)
+      transition: var(--transition)
+
+    &:hover::after
+      width: 100%
+
+    &.active
+      color: var(--color-secondary)
+      &::after
+        width: 100%
+
+.dropdown
+  position: relative
+  display: inline-block
+
+  .dropdownContent
+    display: none
+    position: absolute
+    right: 0
+    background-color: white
+    min-width: 160px
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+    z-index: 1
+    border-radius: 4px
+
+    a
+      color: black
+      padding: 12px 16px
+      text-decoration: none
+      display: block
+      transition: var(--transition)
+
+      &:hover
+        background-color: #f1f1f1
+        color: var(--color-secondary)
+
+  &:hover .dropdownContent
+    display: block
+
+.mobileMenuBtn
+  display: none
+  flex-direction: column
+  justify-content: space-between
+  width: 30px
+  height: 21px
+  cursor: pointer
+
+  span
+    display: block
+    height: 3px
+    width: 100%
+    background-color: var(--color-primary)
+    border-radius: 3px
+    transition: var(--transition)
+
+.checkerboardBar
+  height: 10px
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-primary) 10px,
+    var(--color-secondary) 10px,
+    var(--color-secondary) 20px
+  )
+
+// Темна тема
+.darkTheme
+  .header
+    &.scrolled
+      background: #222
+
+  .logoPrimary,
+  .navLinks a,
+  .mobileMenuBtn span
+    color: white
+
+  .dropdownContent
+    background-color: #333
+
+    a
+      color: white
+
+      &:hover
+        background-color: #444
+
+// Адаптив
+@media (max-width: 1024px)
+  .navLinks
+    display: none
+
+  .mobileMenuBtn
+    display: flex
+
+  .headerContainer
+    padding: 0 1rem
+
+  .logo
+    font-size: 1.5rem
