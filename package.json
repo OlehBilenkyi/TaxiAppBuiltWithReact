@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://OlehBilenkyi.github.io/TaxiReact",
+  "homepage": "https://OlehBilenkyi.github.io/TaxiAppBuiltWithReact",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

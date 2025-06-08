@@ -1,5 +1,14 @@
 import { useState } from "react";
 
+// Импортируем все аватары
+import ivanAvatar from "../assets/images/reviews/ivan.jpg";
+import mariaAvatar from "../assets/images/reviews/maria.jpg";
+import alexeyAvatar from "../assets/images/reviews/alexey.jpg";
+import olgaAvatar from "../assets/images/reviews/olga.jpg";
+import dmitryAvatar from "../assets/images/reviews/dmitry.jpg";
+import annaAvatar from "../assets/images/reviews/anna.jpg";
+import sergeyAvatar from "../assets/images/reviews/sergey.jpg";
+
 export const useReviewsData = () => {
   const [reviews] = useState([
     {
@@ -8,7 +17,7 @@ export const useReviewsData = () => {
       content: "Very satisfied with the quality of service and the cars.",
       author: "Ivan I.",
       rating: 5,
-      avatar: "/images/reviews/ivan.jpg",
+      avatar: ivanAvatar,
       fullContent:
         "Very satisfied with the quality of service and the cars. Everything was top-notch, highly recommend!",
       date: "10.06.2025",
@@ -20,7 +29,7 @@ export const useReviewsData = () => {
         "The paperwork was done quickly, the car is in excellent condition.",
       author: "Maria K.",
       rating: 4,
-      avatar: "/images/reviews/maria.jpg",
+      avatar: mariaAvatar,
       fullContent:
         "The paperwork was done quickly, the car is in excellent condition. Minor comments on the cleanliness of the interior, but overall everything is great.",
       date: "05.06.2025",
@@ -31,7 +40,7 @@ export const useReviewsData = () => {
       content: "Very convenient and fast. Everything was great!",
       author: "Alexey S.",
       rating: 5,
-      avatar: "/images/reviews/alexey.jpg",
+      avatar: alexeyAvatar,
       fullContent:
         "Very convenient and fast. Everything was great! Especially impressed with the staff's attitude and the speed of processing.",
       date: "01.06.2025",
@@ -43,7 +52,7 @@ export const useReviewsData = () => {
         "The cars are in excellent condition, everything works like clockwork.",
       author: "Olga P.",
       rating: 5,
-      avatar: "/images/reviews/olga.jpg",
+      avatar: olgaAvatar,
       fullContent:
         "The cars are in excellent condition, everything works like clockwork. Very satisfied with the choice and service.",
       date: "28.05.2025",
@@ -54,7 +63,7 @@ export const useReviewsData = () => {
       content: "Long wait and inconvenient office location.",
       author: "Dmitry V.",
       rating: 2,
-      avatar: "/images/reviews/dmitry.jpg",
+      avatar: dmitryAvatar,
       fullContent:
         "Long wait and inconvenient office location. The car was not very clean, and the staff were not very helpful.",
       date: "20.05.2025",
@@ -65,7 +74,7 @@ export const useReviewsData = () => {
       content: "The car broke down after two days of use.",
       author: "Anna T.",
       rating: 1,
-      avatar: "/images/reviews/anna.jpg",
+      avatar: annaAvatar,
       fullContent:
         "The car broke down after two days of use. The service did not respond promptly to my complaint.",
       date: "15.05.2025",
@@ -76,7 +85,7 @@ export const useReviewsData = () => {
       content: "Overall good, but there were issues with booking.",
       author: "Sergey N.",
       rating: 3,
-      avatar: "/images/reviews/sergey.jpg",
+      avatar: sergeyAvatar,
       fullContent:
         "Overall good, but there were issues with booking. Had to wait extra time to get the car.",
       date: "10.05.2025",

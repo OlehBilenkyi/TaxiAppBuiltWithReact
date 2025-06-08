@@ -1,32 +1,44 @@
-// carsData.js
+// Импортируем все изображения автомобилей
+import toyotaCorollaImg from "../assets/images/cars/toyota-corolla.jpg";
+import skodaOctaviaImg from "../assets/images/cars/skoda-octavia.jpg";
+import volkswagenGolfImg from "../assets/images/cars/volkswagen-golf.jpg";
+import bmwX5Img from "../assets/images/cars/bmw-x5.jpg";
+import teslaModelSImg from "../assets/images/cars/tesla-model-s.jpg";
+import mercedesEClassImg from "../assets/images/cars/mercedes-e-class.jpg";
+import audiQ7Img from "../assets/images/cars/audi-q7.jpg";
+import porsche911Img from "../assets/images/cars/porsche-911.jpg";
+import jaguarFTypeImg from "../assets/images/cars/jaguar-f-type.jpg";
+import landRoverDefenderImg from "../assets/images/cars/land-rover-defender.jpg";
+import ferrari488Img from "../assets/images/cars/ferrari-488.jpg";
+import lamborghiniHuracanImg from "../assets/images/cars/lamborghini-huracan.jpg";
+import rollsRoyceGhostImg from "../assets/images/cars/rolls-royce-ghost.jpg";
+
 export const cars = [
   {
     id: 1,
-    main_image: "/images/cars/toyota-corolla.jpg",
+    main_image: toyotaCorollaImg,
     name: "Toyota Corolla",
     version: "1.6 Hybrid",
     rental_price: 1200,
     deposit_price: 5000,
-    description:
-      "An economical hybrid with low fuel consumption. Ideal for city driving.",
+    description: "An economical hybrid with low fuel consumption. Ideal for city driving.",
     created_at: "15.05.2025",
     updated_at: "20.05.2025",
   },
   {
     id: 2,
-    main_image: "/images/cars/skoda-octavia.jpg",
+    main_image: skodaOctaviaImg,
     name: "Skoda Octavia",
     version: "1.4 TSI",
     rental_price: 1400,
     deposit_price: 6000,
-    description:
-      "Spacious interior and comfortable suspension. An excellent choice for work.",
+    description: "Spacious interior and comfortable suspension. An excellent choice for work.",
     created_at: "10.05.2025",
     updated_at: "18.05.2025",
   },
   {
     id: 3,
-    main_image: "/images/cars/volkswagen-golf.jpg",
+    main_image: volkswagenGolfImg,
     name: "Volkswagen Golf",
     version: "1.5 TSI",
     rental_price: 1300,
@@ -37,7 +49,7 @@ export const cars = [
   },
   {
     id: 4,
-    main_image: "/images/cars/bmw-x5.jpg",
+    main_image: bmwX5Img,
     name: "BMW X5",
     version: "xDrive40i",
     rental_price: 2500,
@@ -48,19 +60,18 @@ export const cars = [
   },
   {
     id: 5,
-    main_image: "/images/cars/tesla-model-s.jpg",
+    main_image: teslaModelSImg,
     name: "Tesla Model S",
     version: "Plaid",
     rental_price: 3000,
     deposit_price: 12000,
-    description:
-      "Cutting-edge electric vehicle with unmatched acceleration and range.",
+    description: "Cutting-edge electric vehicle with unmatched acceleration and range.",
     created_at: "05.06.2025",
     updated_at: "15.06.2025",
   },
   {
     id: 6,
-    main_image: "/images/cars/mercedes-e-class.jpg",
+    main_image: mercedesEClassImg,
     name: "Mercedes-Benz E-Class",
     version: "E 450 4MATIC",
     rental_price: 2800,
@@ -71,7 +82,7 @@ export const cars = [
   },
   {
     id: 7,
-    main_image: "/images/cars/audi-q7.jpg",
+    main_image: audiQ7Img,
     name: "Audi Q7",
     version: "55 TFSI",
     rental_price: 2700,
@@ -82,7 +93,7 @@ export const cars = [
   },
   {
     id: 8,
-    main_image: "/images/cars/porsche-911.jpg",
+    main_image: porsche911Img,
     name: "Porsche 911",
     version: "Carrera S",
     rental_price: 3500,
@@ -93,19 +104,18 @@ export const cars = [
   },
   {
     id: 9,
-    main_image: "/images/cars/jaguar-f-type.jpg",
+    main_image: jaguarFTypeImg,
     name: "Jaguar F-Type",
     version: "R",
     rental_price: 3200,
     deposit_price: 14000,
-    description:
-      "Stunning sports car with a powerful engine and luxurious interior.",
+    description: "Stunning sports car with a powerful engine and luxurious interior.",
     created_at: "25.06.2025",
     updated_at: "05.07.2025",
   },
   {
     id: 10,
-    main_image: "/images/cars/land-rover-defender.jpg",
+    main_image: landRoverDefenderImg,
     name: "Land Rover Defender",
     version: "110",
     rental_price: 2900,
@@ -116,7 +126,7 @@ export const cars = [
   },
   {
     id: 11,
-    main_image: "/images/cars/ferrari-488.jpg",
+    main_image: ferrari488Img,
     name: "Ferrari 488",
     version: "GTB",
     rental_price: 4000,
@@ -127,7 +137,7 @@ export const cars = [
   },
   {
     id: 12,
-    main_image: "/images/cars/lamborghini-huracan.jpg",
+    main_image: lamborghiniHuracanImg,
     name: "Lamborghini Huracan",
     version: "EVO",
     rental_price: 4500,
@@ -138,13 +148,12 @@ export const cars = [
   },
   {
     id: 13,
-    main_image: "/images/cars/rolls-royce-ghost.jpg",
+    main_image: rollsRoyceGhostImg,
     name: "Rolls-Royce Ghost",
     version: "Black Badge",
     rental_price: 5000,
     deposit_price: 25000,
-    description:
-      "Ultimate luxury sedan with unparalleled comfort and elegance.",
+    description: "Ultimate luxury sedan with unparalleled comfort and elegance.",
     created_at: "15.07.2025",
     updated_at: "25.07.2025",
   },

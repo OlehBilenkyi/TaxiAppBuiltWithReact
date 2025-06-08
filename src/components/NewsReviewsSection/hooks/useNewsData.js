@@ -1,5 +1,27 @@
 import { useState } from "react";
 
+// Импортируем все изображения для новостей
+import teslaModelS from "../assets/images/news/tesla-model-s.jpg";
+import teslaInterior from "../assets/images/news/tesla-interior.jpg";
+import teslaDashboard from "../assets/images/news/tesla-dashboard.jpg";
+import toyotaCorolla from "../assets/images/news/toyota-corolla.jpg";
+import toyotaInterior from "../assets/images/news/toyota-interior.jpg";
+import toyotaEngine from "../assets/images/news/toyota-engine.jpg";
+import carFleet from "../assets/images/news/car-fleet.jpg";
+import bmwX5 from "../assets/images/news/bmw-x5.jpg";
+import toyotaCamry from "../assets/images/news/toyota-camry.jpg";
+import fordExplorer from "../assets/images/news/ford-explorer.jpg";
+import rentalTerms from "../assets/images/news/rental-terms.jpg";
+import rentalBenefits from "../assets/images/news/rental-benefits.jpg";
+import corporateRental from "../assets/images/news/corporate-rental.jpg";
+import winterDiscounts from "../assets/images/news/winter-discounts.jpg";
+import subaruOutback from "../assets/images/news/subaru-outback.jpg";
+import audiQ5 from "../assets/images/news/audi-q5.jpg";
+import volvoXC90 from "../assets/images/news/volvo-xc90.jpg";
+import mobileApp from "../assets/images/news/mobile-app.jpg";
+import appScreenshots1 from "../assets/images/news/app-screenshots-1.jpg";
+import appScreenshots2 from "../assets/images/news/app-screenshots-2.jpg";
+
 export const useNewsData = () => {
   const [news] = useState([
     {
@@ -9,7 +31,7 @@ export const useNewsData = () => {
       tags: ["electric cars", "premium"],
       content: "A new car has arrived in our fleet: Tesla Model S 2025.",
       date: "01.03.2025",
-      image: "/images/news/tesla-model-s.jpg",
+      image: teslaModelS,
       fullContent: [
         "Tesla Model S 2025 with a range of up to 650 km. The new design and improved features make it one of the best electric cars on the market.",
         "Key features:",
@@ -19,20 +41,16 @@ export const useNewsData = () => {
         "- Updated multimedia system with voice control",
         "Available colors: black, white, blue, red.",
       ],
-      gallery: [
-        "/images/news/tesla-interior.jpg",
-        "/images/news/tesla-dashboard.jpg",
-      ],
+      gallery: [teslaInterior, teslaDashboard],
     },
     {
       id: 2,
       title: "Reduced rental price for Toyota Corolla",
       type: "promotion",
       tags: ["economical", "popular"],
-      content:
-        "Renting the popular Toyota Corolla has become even more affordable.",
+      content: "Renting the popular Toyota Corolla has become even more affordable.",
       date: "25.02.2025",
-      image: "/images/news/toyota-corolla.jpg",
+      image: toyotaCorolla,
       fullContent: [
         "Toyota Corolla - a reliable and economical car that is perfect for city trips and long journeys.",
         "New rental conditions:",
@@ -44,10 +62,7 @@ export const useNewsData = () => {
         "- Trunk volume: 470 l",
         "- Equipment: climate control, rear-view camera, Apple CarPlay/Android Auto",
       ],
-      gallery: [
-        "/images/news/toyota-interior.jpg",
-        "/images/news/toyota-engine.jpg",
-      ],
+      gallery: [toyotaInterior, toyotaEngine],
     },
     {
       id: 3,
@@ -56,7 +71,7 @@ export const useNewsData = () => {
       tags: ["variety", "new models"],
       content: "We have added 10 new cars of various classes for your comfort.",
       date: "15.02.2025",
-      image: "/images/news/car-fleet.jpg",
+      image: carFleet,
       fullContent: [
         "The new cars include sedans, SUVs, and hybrids to meet any needs of our customers.",
         "Among the new models:",
@@ -65,21 +80,16 @@ export const useNewsData = () => {
         "- Ford Explorer: powerful and reliable SUV for the whole family",
         "All cars undergo thorough inspection before being added to the fleet.",
       ],
-      gallery: [
-        "/images/news/bmw-x5.jpg",
-        "/images/news/toyota-camry.jpg",
-        "/images/news/ford-explorer.jpg",
-      ],
+      gallery: [bmwX5, toyotaCamry, fordExplorer],
     },
     {
       id: 4,
       title: "New rental conditions",
       type: "promotion",
       tags: ["flexibility", "long-term rental"],
-      content:
-        "We present new flexible rental conditions for long-term customers.",
+      content: "We present new flexible rental conditions for long-term customers.",
       date: "10.02.2025",
-      image: "/images/news/rental-terms.jpg",
+      image: rentalTerms,
       fullContent: [
         "Now you can rent a car for a period from one day to several months with favorable conditions and discounts.",
         "Benefits of long-term rental:",
@@ -88,10 +98,7 @@ export const useNewsData = () => {
         "- Possibility to replace the car once a month",
         "Special conditions for corporate clients.",
       ],
-      gallery: [
-        "/images/news/rental-benefits.jpg",
-        "/images/news/corporate-rental.jpg",
-      ],
+      gallery: [rentalBenefits, corporateRental],
     },
     {
       id: 5,
@@ -100,7 +107,7 @@ export const useNewsData = () => {
       tags: ["winter offers", "all-wheel drive"],
       content: "Special winter offers for renting all-wheel drive cars.",
       date: "05.02.2025",
-      image: "/images/news/winter-discounts.jpg",
+      image: winterDiscounts,
       fullContent: [
         "In winter, we offer special discounts on renting all-wheel drive cars to make your trips safe and comfortable.",
         "Winter offers:",
@@ -109,21 +116,16 @@ export const useNewsData = () => {
         "- Special conditions for rentals at ski resorts",
         "Popular models: Subaru Outback, Audi Q5, Volvo XC90.",
       ],
-      gallery: [
-        "/images/news/subaru-outback.jpg",
-        "/images/news/audi-q5.jpg",
-        "/images/news/volvo-xc90.jpg",
-      ],
+      gallery: [subaruOutback, audiQ5, volvoXC90],
     },
     {
       id: 6,
       title: "Mobile app update",
       type: "new",
       tags: ["technology", "convenience"],
-      content:
-        "Our app has become even more convenient! Try the new version today.",
+      content: "Our app has become even more convenient! Try the new version today.",
       date: "28.01.2025",
-      image: "/images/news/mobile-app.jpg",
+      image: mobileApp,
       fullContent: [
         "The new version of our mobile app offers an improved interface and additional features for convenient rental management.",
         "New features:",
@@ -133,10 +135,7 @@ export const useNewsData = () => {
         "- Real-time car status tracking",
         "The app is available for download on the App Store and Google Play.",
       ],
-      gallery: [
-        "/images/news/app-screenshots-1.jpg",
-        "/images/news/app-screenshots-2.jpg",
-      ],
+      gallery: [appScreenshots1, appScreenshots2],
     },
   ]);
 
