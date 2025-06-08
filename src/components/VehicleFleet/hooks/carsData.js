@@ -1,17 +1,18 @@
-// Импортируем все изображения автомобилей
-import toyotaCorollaImg from "../assets/images/cars/toyota-corolla.jpg";
-import skodaOctaviaImg from "../assets/images/cars/skoda-octavia.jpg";
-import volkswagenGolfImg from "../assets/images/cars/volkswagen-golf.jpg";
-import bmwX5Img from "../assets/images/cars/bmw-x5.jpg";
-import teslaModelSImg from "../assets/images/cars/tesla-model-s.jpg";
-import mercedesEClassImg from "../assets/images/cars/mercedes-e-class.jpg";
-import audiQ7Img from "../assets/images/cars/audi-q7.jpg";
-import porsche911Img from "../assets/images/cars/porsche-911.jpg";
-import jaguarFTypeImg from "../assets/images/cars/jaguar-f-type.jpg";
-import landRoverDefenderImg from "../assets/images/cars/land-rover-defender.jpg";
-import ferrari488Img from "../assets/images/cars/ferrari-488.jpg";
-import lamborghiniHuracanImg from "../assets/images/cars/lamborghini-huracan.jpg";
-import rollsRoyceGhostImg from "../assets/images/cars/rolls-royce-ghost.jpg";
+
+// Изображения автомобилей (динамический импорт)
+const toyotaCorollaImg = new URL('../../../assets/images/cars/toyota-corolla.jpg', import.meta.url).href;
+const skodaOctaviaImg = new URL('../../../assets/images/cars/skoda-octavia.jpg', import.meta.url).href;
+const volkswagenGolfImg = new URL('../../../assets/images/cars/volkswagen-golf.jpg', import.meta.url).href;
+const bmwX5Img = new URL('../../../assets/images/cars/bmw-x5.jpg', import.meta.url).href;
+const teslaModelSImg = new URL('../../../assets/images/cars/tesla-model-s.jpg', import.meta.url).href;
+const mercedesEClassImg = new URL('../../../assets/images/cars/mercedes-e-class.jpg', import.meta.url).href;
+const audiQ7Img = new URL('../../../assets/images/cars/audi-q7.jpg', import.meta.url).href;
+const porsche911Img = new URL('../../../assets/images/cars/porsche-911.jpg', import.meta.url).href;
+const jaguarFTypeImg = new URL('../../../assets/images/cars/jaguar-f-type.jpg', import.meta.url).href;
+const landRoverDefenderImg = new URL('../../../assets/images/cars/land-rover-defender.jpg', import.meta.url).href;
+const ferrari488Img = new URL('../../../assets/images/cars/ferrari-488.jpg', import.meta.url).href;
+const lamborghiniHuracanImg = new URL('../../../assets/images/cars/lamborghini-huracan.jpg', import.meta.url).href;
+const rollsRoyceGhostImg = new URL('../../../assets/images/cars/rolls-royce-ghost.jpg', import.meta.url).href;
 
 export const cars = [
   {
@@ -21,7 +22,8 @@ export const cars = [
     version: "1.6 Hybrid",
     rental_price: 1200,
     deposit_price: 5000,
-    description: "An economical hybrid with low fuel consumption. Ideal for city driving.",
+    description:
+      "An economical hybrid with low fuel consumption. Ideal for city driving.",
     created_at: "15.05.2025",
     updated_at: "20.05.2025",
   },
@@ -32,7 +34,8 @@ export const cars = [
     version: "1.4 TSI",
     rental_price: 1400,
     deposit_price: 6000,
-    description: "Spacious interior and comfortable suspension. An excellent choice for work.",
+    description:
+      "Spacious interior and comfortable suspension. An excellent choice for work.",
     created_at: "10.05.2025",
     updated_at: "18.05.2025",
   },
@@ -65,7 +68,8 @@ export const cars = [
     version: "Plaid",
     rental_price: 3000,
     deposit_price: 12000,
-    description: "Cutting-edge electric vehicle with unmatched acceleration and range.",
+    description:
+      "Cutting-edge electric vehicle with unmatched acceleration and range.",
     created_at: "05.06.2025",
     updated_at: "15.06.2025",
   },
@@ -109,7 +113,8 @@ export const cars = [
     version: "R",
     rental_price: 3200,
     deposit_price: 14000,
-    description: "Stunning sports car with a powerful engine and luxurious interior.",
+    description:
+      "Stunning sports car with a powerful engine and luxurious interior.",
     created_at: "25.06.2025",
     updated_at: "05.07.2025",
   },
@@ -153,7 +158,8 @@ export const cars = [
     version: "Black Badge",
     rental_price: 5000,
     deposit_price: 25000,
-    description: "Ultimate luxury sedan with unparalleled comfort and elegance.",
+    description:
+      "Ultimate luxury sedan with unparalleled comfort and elegance.",
     created_at: "15.07.2025",
     updated_at: "25.07.2025",
   },

@@ -1,27 +1,26 @@
 import { useState } from "react";
 
-// Импортируем все изображения для новостей
-import teslaModelS from "../assets/images/news/tesla-model-s.jpg";
-import teslaInterior from "../assets/images/news/tesla-interior.jpg";
-import teslaDashboard from "../assets/images/news/tesla-dashboard.jpg";
-import toyotaCorolla from "../assets/images/news/toyota-corolla.jpg";
-import toyotaInterior from "../assets/images/news/toyota-interior.jpg";
-import toyotaEngine from "../assets/images/news/toyota-engine.jpg";
-import carFleet from "../assets/images/news/car-fleet.jpg";
-import bmwX5 from "../assets/images/news/bmw-x5.jpg";
-import toyotaCamry from "../assets/images/news/toyota-camry.jpg";
-import fordExplorer from "../assets/images/news/ford-explorer.jpg";
-import rentalTerms from "../assets/images/news/rental-terms.jpg";
-import rentalBenefits from "../assets/images/news/rental-benefits.jpg";
-import corporateRental from "../assets/images/news/corporate-rental.jpg";
-import winterDiscounts from "../assets/images/news/winter-discounts.jpg";
-import subaruOutback from "../assets/images/news/subaru-outback.jpg";
-import audiQ5 from "../assets/images/news/audi-q5.jpg";
-import volvoXC90 from "../assets/images/news/volvo-xc90.jpg";
-import mobileApp from "../assets/images/news/mobile-app.jpg";
-import appScreenshots1 from "../assets/images/news/app-screenshots-1.jpg";
-import appScreenshots2 from "../assets/images/news/app-screenshots-2.jpg";
-
+// Динамически импортируем все изображения для новостей
+const teslaModelS = new URL('../../../assets/images/news/tesla-model-s.jpg', import.meta.url).href;
+const teslaInterior = new URL('../assets/images/news/tesla-interior.jpg', import.meta.url).href;
+const teslaDashboard = new URL('../assets/images/news/tesla-dashboard.jpg', import.meta.url).href;
+const toyotaCorolla = new URL('../assets/images/news/toyota-corolla.jpg', import.meta.url).href;
+const toyotaInterior = new URL('../assets/images/news/toyota-interior.jpg', import.meta.url).href;
+const toyotaEngine = new URL('../assets/images/news/toyota-engine.jpg', import.meta.url).href;
+const carFleet = new URL('../assets/images/news/car-fleet.jpg', import.meta.url).href;
+const bmwX5 = new URL('../assets/images/news/bmw-x5.jpg', import.meta.url).href;
+const toyotaCamry = new URL('../assets/images/news/toyota-camry.jpg', import.meta.url).href;
+const fordExplorer = new URL('../assets/images/news/ford-explorer.jpg', import.meta.url).href;
+const rentalTerms = new URL('../assets/images/news/rental-terms.jpg', import.meta.url).href;
+const rentalBenefits = new URL('../assets/images/news/rental-benefits.jpg', import.meta.url).href;
+const corporateRental = new URL('../assets/images/news/corporate-rental.jpg', import.meta.url).href;
+const winterDiscounts = new URL('../assets/images/news/winter-discounts.jpg', import.meta.url).href;
+const subaruOutback = new URL('../assets/images/news/subaru-outback.jpg', import.meta.url).href;
+const audiQ5 = new URL('../assets/images/news/audi-q5.jpg', import.meta.url).href;
+const volvoXC90 = new URL('../assets/images/news/volvo-xc90.jpg', import.meta.url).href;
+const mobileApp = new URL('../assets/images/news/mobile-app.jpg', import.meta.url).href;
+const appScreenshots1 = new URL('../assets/images/news/app-screenshots-1.jpg', import.meta.url).href;
+const appScreenshots2 = new URL('../assets/images/news/app-screenshots-2.jpg', import.meta.url).href;
 export const useNewsData = () => {
   const [news] = useState([
     {

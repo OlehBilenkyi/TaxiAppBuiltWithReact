@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-// Импортируем все аватары
-import ivanAvatar from "../assets/images/reviews/ivan.jpg";
-import mariaAvatar from "../assets/images/reviews/maria.jpg";
-import alexeyAvatar from "../assets/images/reviews/alexey.jpg";
-import olgaAvatar from "../assets/images/reviews/olga.jpg";
-import dmitryAvatar from "../assets/images/reviews/dmitry.jpg";
-import annaAvatar from "../assets/images/reviews/anna.jpg";
-import sergeyAvatar from "../assets/images/reviews/sergey.jpg";
+// Аватары отзывов (динамический импорт)
+const ivanAvatar = new URL('../assets/images/reviews/ivan.jpg', import.meta.url).href;
+const mariaAvatar = new URL('../assets/images/reviews/maria.jpg', import.meta.url).href;
+const alexeyAvatar = new URL('../assets/images/reviews/alexey.jpg', import.meta.url).href;
+const olgaAvatar = new URL('../assets/images/reviews/olga.jpg', import.meta.url).href;
+const dmitryAvatar = new URL('../assets/images/reviews/dmitry.jpg', import.meta.url).href;
+const annaAvatar = new URL('../assets/images/reviews/anna.jpg', import.meta.url).href;
+const sergeyAvatar = new URL('../assets/images/reviews/sergey.jpg', import.meta.url).href;
 
 export const useReviewsData = () => {
   const [reviews] = useState([
