@@ -34,14 +34,15 @@ const FeaturedItem = ({ item, type, onReadMore, showFullContent = false }) => {
               ))}
             </div>
           )}
-          {!showFullContent && (
-            <button
-              onClick={() => onReadMore(item)}
-              className={styles.readMoreBtn}
-            >
-              {type === "news" ? "Read more" : "Read full review"}
-            </button>
-          )}
+          {!showFullContent &&
+            type === "news" && ( // Показываем кнопку только для новостей
+              <button
+                onClick={() => onReadMore(item)}
+                className={styles.readMoreBtn}
+              >
+                Read more
+              </button>
+            )}
         </div>
       </div>
     </div>
