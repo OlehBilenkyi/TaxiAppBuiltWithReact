@@ -1,46 +1,298 @@
-.newsReviewsSection
-  background-color: var(--color-tertiary)
-  display: flex
-  flex-wrap: wrap
-  gap: 40px
-  padding: 60px 20px
+// NewsReviewsSection.module.sass
 
-  @media (max-width: 768px)
-    flex-direction: column
-    gap: 20px
-    padding: 40px 20px
+.newsReviewsSection
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)
+  padding: 5rem 2rem
+  border-radius: 16px
+  margin: 2rem auto
+  max-width: 1400px
+  font-family: "Inter", sans-serif
+  color: #f8f8f8
+  position: relative
+  overflow: hidden
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25)
+  border: 1px solid rgba(63, 209, 15, 0.1)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 5px
+    background: linear-gradient(90deg, #3fd10f, #1fd10f)
+
+.sectionHeader
+  text-align: center
+  margin-bottom: 3rem
+  position: relative
+  z-index: 2
+
+  h2
+    font-size: 2.5rem
+    font-weight: 700
+    margin-bottom: 1.5rem
+    background: linear-gradient(90deg, #3fd10f, #8ef77b)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    display: inline-block
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: -12px
+      left: 50%
+      transform: translateX(-50%)
+      width: 100px
+      height: 4px
+      background: linear-gradient(90deg, #3fd10f, #1fd10f)
+      border-radius: 4px
+      box-shadow: 0 0 15px rgba(63, 209, 15, 0.5)
+
+.sectionSubtitle
+  font-size: 1.2rem
+  line-height: 1.6
+  max-width: 700px
+  margin: 0 auto
+  color: rgba(248, 248, 248, 0.8)
+  position: relative
+
+.contentWrapper
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 2.5rem
+  margin: 0 auto 4rem
+  position: relative
+  z-index: 2
+
+  @media (max-width: 1024px)
+    grid-template-columns: 1fr
 
 .newsList, .reviewsList
-  flex: 1
-  min-width: 300px
-  
-  h2
-    font-size: 1.8rem
-    margin-bottom: 20px
-    color: var(--color-secondary)
+  background: rgba(30, 30, 30, 0.6)
+  backdrop-filter: blur(10px)
+  border-radius: 16px
+  padding: 2rem
+  border: 1px solid rgba(63, 209, 15, 0.15)
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1)
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
 
-.newsItem, .reviewItem
-  background: var(--color-dark)
-  border-radius: 8px
-  box-shadow: 0 2px 5px var(--color-shadow)
-  padding: 20px
-  margin-bottom: 20px
-  transition: all 0.3s ease
-  
   &:hover
     transform: translateY(-5px)
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7)
-  
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4)
+    border-color: rgba(63, 209, 15, 0.3)
+
+.sectionTitle
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 2rem
+  padding-bottom: 1rem
+  border-bottom: 1px solid rgba(63, 209, 15, 0.2)
+
   h3
-    font-size: 1.2rem
-    margin-bottom: 10px
-    color: var(--color-primary)
-  
+    font-size: 1.5rem
+    font-weight: 600
+    margin: 0
+    color: #f8f8f8
+
+.viewAllBtn
+  background: none
+  border: none
+  color: #3fd10f
+  cursor: pointer
+  font-size: 1rem
+  font-weight: 600
+  display: flex
+  align-items: center
+  gap: 0.5rem
+  transition: all 0.3s ease
+  padding: 0.5rem 0
+
+  &::after
+    content: '→'
+    transition: transform 0.3s ease
+
+  &:hover
+    color: #8ef77b
+
+    &::after
+      transform: translateX(4px)
+
+.featuredItem
+  background: linear-gradient(145deg, #1e1e1e, #1a1a1a)
+  border: 1px solid rgba(63, 209, 15, 0.2)
+  border-radius: 12px
+  padding: 1.5rem
+  margin-bottom: 1.5rem
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1)
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+
+  &:hover
+    transform: translateY(-8px)
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+    border-color: rgba(63, 209, 15, 0.4)
+
+.featuredItem .newsImage, .featuredItem .image
+  width: 100%
+  height: 200px
+  object-fit: cover
+  border-radius: var(--radius-md)
+  margin-bottom: 1rem
+  display: block
+
+.statsSection
+  background: rgba(20, 20, 20, 0.7)
+  backdrop-filter: blur(10px)
+  border-radius: 16px
+  padding: 3rem 2rem
+  margin: 4rem auto
+  max-width: 1400px
+  border: 1px solid rgba(63, 209, 15, 0.1)
+  position: relative
+  overflow: hidden
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSg2MywgMjA5LCAxNSwgMC4wMykiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')
+
+.statsTitle
+  font-size: 2rem
+  font-weight: 700
+  margin-bottom: 3rem
+  text-align: center
+  color: #f8f8f8
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: -10px
+    left: 50%
+    transform: translateX(-50%)
+    width: 80px
+    height: 4px
+    background: linear-gradient(90deg, #3fd10f, #8ef77b)
+    border-radius: 4px
+
+.statsGrid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  gap: 2rem
+  position: relative
+  z-index: 2
+
+  @media (max-width: 768px)
+    grid-template-columns: repeat(2, 1fr)
+
+  @media (max-width: 480px)
+    grid-template-columns: 1fr
+
+.statItem
+  background: rgba(30, 30, 30, 0.6)
+  border-radius: 12px
+  padding: 2rem 1rem
+  border: 1px solid rgba(63, 209, 15, 0.1)
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1)
+  text-align: center
+  backdrop-filter: blur(5px)
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1)
+
+  &:hover
+    transform: translateY(-10px)
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2)
+    border-color: rgba(63, 209, 15, 0.3)
+
+    .statValue
+      text-shadow: 0 0 10px rgba(63, 209, 15, 0.5)
+
+.statValue
+  font-size: 2.5rem
+  font-weight: 700
+  margin-bottom: 0.5rem
+  background: linear-gradient(135deg, #3fd10f, #8ef77b)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  display: inline-block
+
+.statLabel
+  font-size: 1.1rem
+  color: rgba(248, 248, 248, 0.7)
+  line-height: 1.5
+
+.ctaSection
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(26, 26, 26, 0.9))
+  border-radius: 16px
+  padding: 3rem 2rem
+  text-align: center
+  margin-top: 4rem
+  border: 1px solid rgba(63, 209, 15, 0.2)
+  position: relative
+  overflow: hidden
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 5px
+    background: linear-gradient(90deg, #3fd10f, #1fd10f)
+
+  h3
+    font-size: 1.8rem
+    font-weight: 600
+    margin-bottom: 1rem
+    color: #f8f8f8
+
   p
-    font-size: 1rem
-    margin-bottom: 10px
-    line-height: 1.4
-    color: #ccc
-  
-  small
-    color: #777
+    font-size: 1.1rem
+    color: rgba(248, 248, 248, 0.8)
+    max-width: 600px
+    margin: 0 auto 2rem
+    line-height: 1.6
+
+.ctaButton
+  background: linear-gradient(135deg, #3fd10f, #1fd10f)
+  color: #0a0a0a
+  border: none
+  padding: 1rem 2.5rem
+  font-size: 1.1rem
+  font-weight: 600
+  border-radius: 50px
+  cursor: pointer
+  transition: all 0.3s ease
+  position: relative
+  overflow: hidden
+  box-shadow: 0 5px 15px rgba(63, 209, 15, 0.3)
+  text-transform: uppercase
+  letter-spacing: 1px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0))
+    opacity: 0
+    transition: opacity 0.3s ease
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 10px 25px rgba(63, 209, 15, 0.4)
+
+    &::before
+      opacity: 1
+
+  &:active
+    transform: translateY(1px)
