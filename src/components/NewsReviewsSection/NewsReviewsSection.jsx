@@ -88,7 +88,10 @@ const NewsReviewsSection = () => {
       <div className={styles.ctaSection}>
         <h3>Want to leave a review?</h3>
         <p>Share your experience with us</p>
-        <button onClick={handleWriteReview} className={styles.ctaButton}>
+        <button
+          onClick={() => (window.location.href = "mailto:info@shpax-arenda.pl")}
+          className={styles.ctaButton}
+        >
           Write a Review
         </button>
       </div>

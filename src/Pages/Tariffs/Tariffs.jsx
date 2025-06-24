@@ -20,7 +20,7 @@ const Tariffs = () => {
               <li>Insurance</li>
               <li>24/7 Support</li>
             </ul>
-            <button className="btn-tariff">Choose</button>
+            {/* <button className="btn-tariff">Choose</button> */}
           </div>
 
           <div className="tariff-card">
@@ -36,7 +36,7 @@ const Tariffs = () => {
               <li>24/7 Support</li>
               <li>Free maintenance</li>
             </ul>
-            <button className="btn-tariff">Choose</button>
+            {/* <button className="btn-tariff">Choose</button> */}
           </div>
 
           <div className="tariff-card">
@@ -53,7 +53,7 @@ const Tariffs = () => {
               <li>Free maintenance</li>
               <li>Additional services</li>
             </ul>
-            <button className="btn-tariff">Choose</button>
+            {/* <button className="btn-tariff">Choose</button> */}
           </div>
         </div>
       </div>

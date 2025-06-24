@@ -37,6 +37,7 @@ const FeaturedItem = ({ item, type, onReadMore, showFullContent = false }) => {
           {!showFullContent &&
             type === "news" && ( // Показываем кнопку только для новостей
               <button
+                style={{ marginBottom: "2rem" }}
                 onClick={() => onReadMore(item)}
                 className={styles.readMoreBtn}
               >
